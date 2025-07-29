@@ -1,0 +1,488 @@
+/* === Styles principaux pour Ski DEKAEL === */
+:root {
+  --main-color: #2d3e50;
+  --accent-color: #00bcd4;
+  --background: #f8f9fa;
+  --text-color: #222;
+  --header-bg: #fff;
+}
+
+/* Polices principales */
+body {
+  font-family: 'Lato', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+.site-title, .banner-title, .section-title, .concept-title, .proposition-title, h1, h2, h3 {
+  font-family: 'Kaushan Script', cursive;
+  color: #3a4664;
+  letter-spacing: 1px;
+}
+.header-main {
+  background: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.5rem 0;
+}
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.site-title {
+  font-size: 2.5rem;
+  margin: 0;
+}
+#nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+#nav-menu a {
+  font-family: 'Lato', Arial, sans-serif;
+  color: #3a4664;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.4em 1em;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  transition: color 0.2s, border 0.2s, background 0.2s;
+}
+#nav-menu a:hover, #nav-menu a:focus {
+  color: #c76d2c;
+  border: 2px solid #c76d2c;
+  background: #fff7f0;
+}
+
+/* Bannière principale */
+.banner-section {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;
+}
+.banner-bg {
+  width: 100vw;
+  min-height: 55vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-overlay {
+  background: rgba(34, 34, 34, 0.45);
+  width: 100%;
+  text-align: center;
+  padding: 4rem 1rem 3rem 1rem;
+}
+.banner-title {
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 8px #222;
+}
+.banner-subtitle {
+  font-size: 2.2rem;
+  color: #fff;
+  font-family: 'Kaushan Script', cursive;
+  text-shadow: 1px 1px 6px #222;
+}
+
+/* Section concept */
+.concept-section {
+  position: relative;
+  min-height: 350px;
+  background: #fff;
+  margin-bottom: 0;
+}
+.concept-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.18;
+  z-index: 1;
+}
+.concept-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 1rem 2rem 1rem;
+  text-align: center;
+}
+.concept-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.2rem;
+}
+.concept-desc {
+  font-size: 1.3rem;
+  color: #3a4664;
+  margin-bottom: 2rem;
+}
+
+/* Boutons principaux */
+.btn-orange {
+  background: #c76d2c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9em 2.2em;
+  font-size: 1.2rem;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(199,109,44,0.10);
+  cursor: pointer;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+  margin-top: 1.2rem;
+  display: inline-block;
+}
+.btn-orange:hover, .btn-orange:focus {
+  background: #a8561e;
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(199,109,44,0.18);
+}
+.btn-orange-outline {
+  background: transparent;
+  color: #c76d2c;
+  border: 2px solid #c76d2c;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  font-size: 1.1rem;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s, transform 0.18s;
+  margin-top: 1.2rem;
+  display: inline-block;
+}
+.btn-orange-outline:hover, .btn-orange-outline:focus {
+  background: #fff7f0;
+  color: #a8561e;
+  border-color: #a8561e;
+  transform: scale(1.07);
+}
+
+/* Propositions */
+.propositions-section {
+  background: #f8f9fa;
+  padding: 3rem 0 2rem 0;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2.5rem;
+}
+.propositions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.proposition {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2rem 1.2rem 1.5rem 1.2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.proposition-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
+}
+.proposition-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.7rem;
+}
+.proposition-btn {
+  margin-top: 1rem;
+}
+
+/* Contact */
+.contact-section {
+  background: #fff;
+  padding: 3rem 0 2rem 0;
+}
+.contact-grid {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact-info {
+  flex: 1 1 220px;
+  min-width: 220px;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.social-links {
+  margin-top: 1.2rem;
+  display: flex;
+  gap: 1.2rem;
+}
+.social-links a.btn-anim {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #3a4664;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  transition: color 0.2s, transform 0.18s;
+}
+.social-links a.btn-anim:hover, .social-links a.btn-anim:focus {
+  color: #c76d2c;
+  transform: scale(1.07);
+}
+.icon-social {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+.social-links a.btn-anim:hover .icon-social svg,
+.social-links a.btn-anim:focus .icon-social svg {
+  color: #c76d2c;
+  fill: #c76d2c;
+  transition: color 0.25s, fill 0.25s;
+}
+
+.contact-form {
+  flex: 2 1 320px;
+  min-width: 260px;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.contact-form label {
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+.contact-form textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+.copy-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+}
+.contact-form button[type="submit"] {
+  background: #c76d2c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.9em 2.2em;
+  font-size: 1.2rem;
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(199,109,44,0.10);
+  cursor: pointer;
+  transition: background 0.18s, transform 0.18s, box-shadow 0.18s;
+  margin-top: 1.2rem;
+  display: inline-block;
+}
+.contact-form button[type="submit"]:hover, .contact-form button[type="submit"]:focus {
+  background: #a8561e;
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(199,109,44,0.18);
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #f8f9fa;
+  color: #888;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .propositions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-grid {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .header-content {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .header-content {
+    padding: 0 0.5rem;
+  }
+  .banner-title {
+    font-size: 2.2rem;
+  }
+  .banner-section, .banner-bg {
+    min-height: 32vh;
+  }
+  .concept-content {
+    padding: 2rem 0.5rem 1.2rem 0.5rem;
+  }
+  .propositions-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*
+  Personnalise les couleurs, la typographie, ou ajoute de nouvelles classes ici !
+*/
+
+/* ===== Menu mobile ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  margin-left: auto;
+}
+.burger-bar {
+  width: 28px;
+  height: 4px;
+  background: var(--main-color);
+  margin: 3px 0;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+/* Masquer le menu sur mobile par défaut */
+#nav-menu {
+  transition: right 0.3s;
+}
+@media (max-width: 800px) {
+  nav#nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    width: 70vw;
+    max-width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 12px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+    z-index: 1000;
+    transition: right 0.3s;
+  }
+  nav#nav-menu.open {
+    right: 0;
+  }
+  .burger {
+    display: flex;
+  }
+  nav#nav-menu ul {
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+  }
+  nav#nav-menu ul li {
+    width: 100%;
+  }
+  nav#nav-menu ul li a {
+    width: 100%;
+    display: block;
+    padding: 0.7rem 0;
+    font-size: 1.2rem;
+  }
+  header nav#nav-menu {
+    box-shadow: none;
+  }
+}
+
+/* Empêcher le scroll du body quand menu mobile ouvert */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ===== Animation fade-in pour le formulaire de contact ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ===== Animations de boutons ===== */
+.btn-anim {
+  transition: background 0.25s, transform 0.18s, box-shadow 0.18s;
+}
+.btn-anim:hover, .btn-anim:focus {
+  background: #0097a7;
+  transform: scale(1.07);
+  box-shadow: 0 4px 16px rgba(0,188,212,0.10);
+}
+
+.icon-social {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+.social-links a.btn-anim {
+  display: inline-flex;
+  align-items: center;
+}
+.social-links a.btn-anim:hover .icon-social svg,
+.social-links a.btn-anim:focus .icon-social svg {
+  color: #0097a7;
+  fill: #0097a7;
+  transition: color 0.25s, fill 0.25s;
+} 
